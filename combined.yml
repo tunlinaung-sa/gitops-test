@@ -5,7 +5,7 @@ metadata:
   namespace: gitops-test
 data:
   index.html: |
-    <html><body><h1>Welcome to GitOps Test! </h1></body></html>
+    <html><body><h1>Welcome to GitOps Test! version 1</h1></body></html>
 ---
 apiVersion: apps/v1
 kind: Deployment
