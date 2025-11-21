@@ -53,16 +53,12 @@ metadata:
   namespace: gitops-test
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-body-size: "10m"
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - nginx.owaymylab.com
-      secretName: portainer-tls
   rules:
     - host: nginx.owaymylab.com
       http:
